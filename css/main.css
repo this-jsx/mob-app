@@ -89,7 +89,7 @@ a, a:visited {
 
 header {
     /* position: relative; */
-    /* height: 100vh; */
+    height: 100vh;
     border: 1px solid lime;
     overflow: hidden;
     padding-bottom: 100px;
