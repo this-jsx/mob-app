@@ -13,6 +13,7 @@ let swiperApp = new Swiper('.swiper__app', {
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true
     },
   
     // Navigation arrows
