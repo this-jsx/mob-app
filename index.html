@@ -6,20 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mob app</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css" integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__top">
           <!-- <div class="row"> -->
-            <div class="header__top-back"><button><img src="img/arrow.svg" alt="back"><span>Назад</span></button></div>
-            <div class="header__top-logo"><a href="/"><img src="img/main-logo.svg" alt="logo"></a></div>
+            <div class="header__top-back"><button class="header__top-back--btn">
+              <img src="img/arrow.svg" alt="logo">
+              <!-- <svg id="svg" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 9C17.5523 9 18 8.55228 18 8C18 7.44772 17.5523 7 17 7V9ZM0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM17 7L1 7V9L17 9V7Z" fill="white"/>
+              </svg> -->
+              <span>Назад</span></button></div>
+            <div class="header__top-logo"><a href="/"><img class="header__top-logo--img" src="img/main-logo.svg" alt="logo"></a></div>
             <div class="header__menu header__menu-burger">
               <div class="header__menu-top">
                   <a href="/" class="header__menu-top--link"><img src="img/main-burger.png" alt="logo"></a>
@@ -36,11 +46,12 @@
                   </ul>
                 </div>
               </div>
-              <div class="hamburger-lines">
+              <img class="burger__btn" src="img/burger-btn-white.svg" alt="">
+              <!-- <div class="hamburger-lines">
                 <span class="line line1"></span>
                 <span class="line line2"></span>
                 <span class="line line3"></span>
-              </div>
+              </div> -->
             </div>
             <!-- <div class="hamburger-lines">
               <span class="line line1"></span>
@@ -78,8 +89,9 @@
                       </div>
                       </div>
                       <div class="swiper-slide swiper-slide--direction">
-                        <div class="swiper-slide--centered">
+                        <div class="swiper-slide--centered" style="position: relative;">
                           <img src="img/step-2.png" alt="step 2">
+                          <img class="swiper-slide_amimated swiper-slide_amimated_1 animate__animated" src="img/animated_1.png" alt="animation" style="position: absolute; height: auto; top: 24%; left: -25%;">
                         </div>
                         <div class="header__bottom-info">
                           <h1 class="header__bottom-title header__bottom-title--small header__bottom-title--dark">Будьте в курсе новинок и акций</h1>
@@ -89,6 +101,7 @@
                       <div class="swiper-slide swiper-slide--direction">
                         <div class="swiper-slide--centered">
                           <img src="img/step-3.png" alt="step 3">
+                          <img class="swiper-slide_amimated swiper-slide_amimated_2 animate__animated" src="img/animated_2.png" alt="animation" style="position: absolute; height: auto; top: 24%; left: -25%;">
                         </div>
                         <div class="header__bottom-info">
                           <h1 class="header__bottom-title header__bottom-title--small header__bottom-title--dark">Выбирайте способы оплаты и доставки</h1>
@@ -98,6 +111,7 @@
                       <div class="swiper-slide swiper-slide--direction">
                         <div class="swiper-slide--centered">
                           <img src="img/step-4.png" alt="step 4">
+                          <img class="swiper-slide_amimated swiper-slide_amimated_3 animate__animated" src="img/animated_3.png" alt="animation" style="position: absolute; height: auto; top: 24%; left: -25%;">
                         </div>
                         <div class="header__bottom-info">
                           <h1 class="header__bottom-title header__bottom-title--small header__bottom-title--dark">Отслеживайте ваш заказ</h1>
@@ -199,9 +213,9 @@
 
     
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script> -->
       <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script> -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js" integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js" integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="js/swiper.js" defer></script>
       <script src="js/app.js" defer></script>
   </body>

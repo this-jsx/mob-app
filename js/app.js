@@ -1,4 +1,4 @@
-const burgerClose = document.querySelector('.hamburger-lines')
+const burgerClose = document.querySelector('.burger__btn')
 const menuBurger = document.querySelector('.header__menu-burger')
 const menuClose = document.querySelector('.header__menu-top--close')
 const header = document.querySelector('header')
@@ -24,10 +24,10 @@ menuClose.addEventListener('click', function() {
 // })
 
 document.addEventListener('click', function(e) {
-    let target = e.target;
-    if (!target.closest(".container")) {
-        menuBurger.classList.remove('header__menu-burger-active');
-    //   form.querySelector('.header__top-form-input').value = "";
-    //   document.querySelector('.form--open').style.opacity = 1;
-    }
-  })
+  let target = e.target;
+  if (!target.closest(".container")) {
+      menuBurger.classList.remove('header__menu-burger-active');
+  //   form.querySelector('.header__top-form-input').value = "";
+  //   document.querySelector('.form--open').style.opacity = 1;
+  }
+})
