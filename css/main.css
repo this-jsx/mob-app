@@ -88,7 +88,7 @@ a, a:visited {
 /* HEADER BOTTOM */
 
 header {
-    /* position: relative; */
+    position: relative;
     height: 100vh;
     border: 1px solid lime;
     overflow: hidden;
@@ -96,7 +96,7 @@ header {
 }
 
 .header__top {
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,13 +131,14 @@ header {
 
 .header__menu-burger {
   height: 100vh;
-  width: auto;
+  /* width: auto; */
+  width: 100vw;
   /* width: 380px; */
   background: var(--white);
   position: absolute;
   z-index: 2;
-  top: -85%;
-  left: -9.5%;
+  top: 0%;
+  left: 0%;
   transition: .6s;
   transform: translateX(300%);
 }
@@ -847,6 +848,24 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 160px;
+  }
+}
+
+
+@media screen and (min-width: 376px) and (max-width: 998px) {
+  .container {
+    width: auto;
+  }
+  .header__top-back {
+    width: auto;
+  }
+  .direct-container {
+    align-items: center;
+    height: 800px;
+  }
+  .direct__box {
+    max-width: none;
+    width: calc(100% - 20px);
   }
 }
 
