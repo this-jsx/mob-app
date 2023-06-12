@@ -37,6 +37,7 @@ const headerItem1 = document.querySelector('.header__item--1')
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   // код для мобильных устройств
   console.log('вход с Айфон / андроид');
+
   headerItem1.style.color = 'green'
 } else {
   // код для обычных устройств
