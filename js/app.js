@@ -37,7 +37,7 @@ const headerItem1 = document.querySelector('.header__link--1')
 // const navigatorUserAgent = navigator.userAgent
 const visibleShopLink = document.querySelector('.footer__left-link_showed img')
 // console.log(navigatorUserAgent);
-console.log(visibleShopLink);
+// console.log(visibleShopLink);
 
 if (/iPhone/i.test(navigator.userAgent)) {
   visibleShopLink.src = 'img/download_appstore.png'
