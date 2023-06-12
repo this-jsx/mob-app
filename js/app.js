@@ -34,14 +34,14 @@ document.addEventListener('click', function(e) {
 
 const headerItem1 = document.querySelector('.header__link--1')
 
-const navigatorUserAgent = navigator.userAgent
+// const navigatorUserAgent = navigator.userAgent
 const visibleShopLink = document.querySelector('.footer__left-link_showed img')
-console.log(navigatorUserAgent);
+// console.log(navigatorUserAgent);
 console.log(visibleShopLink);
 
-if (navigatorUserAgent === /iPhone/ ) {
+if (/iPhone/i.test(navigator.userAgent)) {
   visibleShopLink.src = 'img/download_appstore.png'
-} else if (navigatorUserAgent === /Android/ ) {
+} else if (/Android/i.test(navigator.userAgent)) {
   visibleShopLink.src = 'img/download_playmarket.png'
 } else {
   visibleShopLink.src = 'img/download_rustore.png'
