@@ -35,10 +35,11 @@ document.addEventListener('click', function(e) {
 const headerItem1 = document.querySelector('.header__link--1')
 
 const navigatorUserAgent = navigator.userAgent
-const visibleShopLink = document.querySelector('.footer__left-link_showed')
-// console.log(navigatorUserAgent);
+const visibleShopLink = document.querySelector('.footer__left-link_showed img')
+console.log(navigatorUserAgent);
+console.log(visibleShopLink);
 
-if (navigatorUserAgent === /iPhone/ || /Android || webOS || iPad || iPod || BlackBerry || IEMobile || Opera Mini/) {
+if (navigatorUserAgent === /iPhone/ ) {
   visibleShopLink.src = 'img/download_appstore.png'
 } else if (navigatorUserAgent === /Android/ ) {
   visibleShopLink.src = 'img/download_playmarket.png'
