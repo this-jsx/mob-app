@@ -32,7 +32,7 @@ document.addEventListener('click', function(e) {
   }
 })
 
-const headerItem1 = document.querySelector('.header__item--1')
+const headerItem1 = document.querySelector('.header__link--1')
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   // код для мобильных устройств
