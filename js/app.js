@@ -31,3 +31,12 @@ document.addEventListener('click', function(e) {
   //   document.querySelector('.form--open').style.opacity = 1;
   }
 })
+
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // код для мобильных устройств
+  console.log('вход с Айфон / андроид');
+} else {
+  // код для обычных устройств
+  console.log('вход с компа');
+}

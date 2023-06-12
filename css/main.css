@@ -55,11 +55,16 @@ a, a:visited {
 
 
 /* swiper */
-.swiper {
+.swiper__app_v {
   /* width: 200px; */
-  height: 415px;
-  height: auto;
-  }
+  width: 1000px;
+  height: 615px;
+  /* height: auto; */
+}
+.swiper__app_g {
+  width: 200px;
+  height: 600px;
+}
 .swiper-slide--direction {
   display: flex;
   flex-direction: column;
@@ -85,7 +90,7 @@ a, a:visited {
 }
 .swiper-slide_amimated {
   position: absolute;
-  height: auto;
+  height: auto !important;
 }
 .swiper-slide_amimated_1 {
   top: 17.5%;
@@ -99,6 +104,10 @@ a, a:visited {
   top: 50%;
   left: -43%;
 }
+.swiper-slide_amimated_4, .swiper-slide_amimated_5, .swiper-slide_amimated_6 {
+  top: 25.5%;
+  width: 105% !important;
+}
 
 
 /* header */
@@ -106,7 +115,7 @@ a, a:visited {
 
 header {
     position: relative;
-    /* height: 100vh; */
+    height: 100vh;
     border: 1px solid lime;
     overflow: hidden;
     padding-bottom: 100px;
@@ -314,6 +323,9 @@ header {
 
 
 /* burger */
+.burger__btn {
+  cursor: pointer;
+}
 .header__top .hamburger-lines {
     display: flex;
     flex-direction: column;
@@ -553,6 +565,9 @@ footer {
 
 /* media */
 @media screen and (min-width: 998px) {
+  .swiper__app_g {
+    display: none;
+  }
   .header__menu-burger {
     position: static;
     height: auto;
@@ -647,6 +662,9 @@ footer {
 
 
 @media screen and (max-width: 998px) {
+  .swiper__app_v {
+    display: none !important;
+  }
   .footer__right {
     display: none;
   }
@@ -879,8 +897,8 @@ footer {
 @media screen and (min-width: 376px) and (max-width: 998px) {
   /* swiper */
   .swiper {
-    padding-bottom: 40px;
-    background: burlywood;
+    /* padding-bottom: 40px; */
+    /* background: burlywood; */
   }
   .swiper-slide img {
     width: 170px;
@@ -916,6 +934,13 @@ footer {
 /* темная тема */
 .header__dark_mode {
   color: var(--black)
+}
+
+/* красный цвет для меня (темная тема) */
+.header__link_pink:hover {
+  color: var(--pink);
+  /* border-color: var(--pink); */
+  /* transition: .25s ease-in; */
 }
 
 /* .header__top-back--btn:hover path {
