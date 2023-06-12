@@ -34,13 +34,25 @@ document.addEventListener('click', function(e) {
 
 const headerItem1 = document.querySelector('.header__link--1')
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  // код для мобильных устройств
-  console.log('вход с Айфон / андроид');
+const navigatorUserAgent = navigator.userAgent
+const visibleShopLink = document.querySelector('.footer__left-link_showed')
+// console.log(navigatorUserAgent);
 
-  headerItem1.style.color = 'green'
+if (navigatorUserAgent === /iPhone/ || /Android || webOS || iPad || iPod || BlackBerry || IEMobile || Opera Mini/) {
+  visibleShopLink.src = 'img/download_appstore.png'
+} else if (navigatorUserAgent === /Android/ ) {
+  visibleShopLink.src = 'img/download_playmarket.png'
 } else {
-  // код для обычных устройств
-  console.log('вход с компа');
-  headerItem1.style.color = 'blue'
+  visibleShopLink.src = 'img/download_rustore.png'
 }
+
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//   // код для мобильных устройств
+//   console.log('вход с Айфон / андроид');
+
+//   headerItem1.style.color = 'green'
+// } else {
+//   // код для обычных устройств
+//   console.log('вход с компа');
+//   headerItem1.style.color = 'blue'
+// }
