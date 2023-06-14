@@ -457,8 +457,12 @@ header {
 /* MAIN */
 /* section direct */
 .direct {
-  padding-bottom: 16px;
+  /* padding-bottom: 16px; */
   background: #fafafa;
+}
+
+.direct .container {
+  padding: 40px 24px;
 }
 
 .direct__title {
