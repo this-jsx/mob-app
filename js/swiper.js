@@ -16,7 +16,11 @@ let swiperV = new Swiper('.swiper__app_v', {
     // And if we need scrollbar
     scrollbar: {
       el: '.swiper-scrollbar',
-    },   
+    },
+
+    mousewheel: {
+      sensitivity: 1
+    }
   });
 
 let heading = document.querySelector('.header__bottom-title')
@@ -24,6 +28,8 @@ let HEADER = document.getElementById('header')
 let headerLogo = document.querySelector('.header__top-logo--img')
 let headerMenuLinks = document.querySelectorAll('.header__link')
 let headerBackBtn = document.querySelector('.header__top-back--btn')
+let headerBottomTitleLight = document.querySelector('.header__bottom-title--light')
+let headerBottomTextLight = document.querySelector('.header__bottom-text--light')
 
 let burgerBtn = document.querySelector('.burger__btn')
 
@@ -35,6 +41,8 @@ swiperV.on('activeIndexChange', function (item) {
 
   if(item.activeIndex > 0) {
     HEADER.style.backgroundColor = '#fff';
+    headerBottomTitleLight.style.color = 'var(--black)'
+    headerBottomTextLight.style.color = 'var(--black)'
     headerLogo.src = 'img/main-logo-dark.svg';
     headerBackBtn.classList.add('header__dark_mode');
     headerMenuLinks.forEach(link => link.classList.add('header__dark_mode'));
@@ -48,6 +56,8 @@ swiperV.on('activeIndexChange', function (item) {
   }
   else if (item.activeIndex === 0) {
     HEADER.style.backgroundColor = '#6D5FC8';
+    headerBottomTitleLight.style.color = 'var(--white)'
+    headerBottomTextLight.style.color = 'var(--white)'
     headerLogo.src = 'img/main-logo.svg';
     headerBackBtn.classList.remove('header__dark_mode');
     headerMenuLinks.forEach(link => link.classList.remove('header__dark_mode'));
@@ -56,6 +66,38 @@ swiperV.on('activeIndexChange', function (item) {
     burgerBtn.src = 'img/burger-btn-white.svg'
   }
 });
+
+const directSection = document.querySelector('.direct')
+const sliderVertical = document.getElementById('slider-vertical')
+
+// function scrollToMaxOrMin(min, max) {
+//   if(item.activeIndex === min || item.activeIndex === max) {
+//     swiperV.mousewheel.disable()
+//   } else {
+//     swiperV.mousewheel.ensable()
+//   }
+// }
+
+// swiperV.on('activeIndexChange', scrollToMaxOrMin(0, 2))
+
+swiperV.on('activeIndexChange', function(item) {
+  // console.log(item);
+  if(item.activeIndex === 2 || item.activeIndex === 0) {
+    // console.log(autoScrollOffset);
+    // scrollY(3500)
+    // directSection.scrollHeight
+    // console.log(directSection.clientHeight);
+    swiperV.mousewheel.disable()
+  }
+})
+
+sliderVertical.addEventListener('mouseleave', function() {
+  swiperV.mousewheel.enable()
+})
+
+// directSection.addEventListener('mouseenter', function() {
+//   swiperV.mousewheel.enable()
+// })
 
 
 // amimation
@@ -66,14 +108,14 @@ const animation_3 = document.querySelector('.swiper-slide_amimated_3')
 swiperV.on('activeIndexChange', function(anim) {
   console.log(swiperV.activeIndex);
   if (swiperV.activeIndex === 1) {
-    animation_1.classList.add('animate__fadeInRight')
+    animation_1.classList.add('animate__bounceInRight')
   } else {
-    animation_1.classList.remove('animate__fadeInRight')
+    animation_1.classList.remove('animate__bounceInRight')
   } 
   if (swiperV.activeIndex === 2) {
-    animation_2.classList.add('animate__slideInRight')
+    animation_2.classList.add('animate__bounceInRight')
   } else {
-    animation_2.classList.remove('animate__slideInRight')
+    animation_2.classList.remove('animate__bounceInRight')
   }
   if (swiperV.activeIndex === 3) {
     animation_3.classList.add('animate__bounceInRight')
@@ -147,18 +189,18 @@ const animation_6 = document.querySelector('.swiper-slide_amimated_6')
 swiperG.on('activeIndexChange', function(anim) {
 console.log(swiperG.activeIndex);
 if (swiperG.activeIndex === 1) {
-  animation_4.classList.add('animate__fadeInDown')
+  animation_4.classList.add('animate__bounceInRight')
 } else {
-  animation_4.classList.remove('animate__fadeInDown')
+  animation_4.classList.remove('animate__bounceInRight')
 } 
 if (swiperG.activeIndex === 2) {
-  animation_5.classList.add('animate__slideInDown')
+  animation_5.classList.add('animate__bounceInRight')
 } else {
-  animation_5.classList.remove('animate__slideInDown')
+  animation_5.classList.remove('animate__bounceInRight')
 }
 if (swiperG.activeIndex === 3) {
-  animation_6.classList.add('animate__bounceInDown')
+  animation_6.classList.add('animate__bounceInRight')
 } else {
-  animation_6.classList.remove('animate__bounceInDown')
+  animation_6.classList.remove('animate__bounceInRight')
 }
 })

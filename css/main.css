@@ -16,7 +16,7 @@
     /* overflow: hidden; */
 }
 
-*:focus-visible {
+*:focus-visible, *:hover, *:active, *:focus {
   outline: none;
 }
 
@@ -127,7 +127,7 @@ a, a:visited {
 }
 .swiper-slide_amimated_4, .swiper-slide_amimated_5, .swiper-slide_amimated_6 {
   top: 25.5%;
-  width: 105% !important;
+  width: 150% !important;
 }
 
 
