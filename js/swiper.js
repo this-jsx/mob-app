@@ -5,6 +5,10 @@ let swiperV = new Swiper('.swiper__app_v', {
       clickable: true
     },
 
+    // autoplay: {
+    //   delay: 2000
+    // },
+
     direction: 'vertical',
   
     // Navigation arrows
@@ -18,9 +22,15 @@ let swiperV = new Swiper('.swiper__app_v', {
       el: '.swiper-scrollbar',
     },
 
+    // mousewheel: {
+    //   sensitivity: 1
+    // },
     mousewheel: {
-      sensitivity: 1
+      releaseOnEdges: true, // NEW
+      sensitivity: 5
     }
+
+    // releaseOnEdges: true
   });
 
 let heading = document.querySelector('.header__bottom-title')
@@ -28,6 +38,7 @@ let HEADER = document.getElementById('header')
 let headerLogo = document.querySelector('.header__top-logo--img')
 let headerMenuLinks = document.querySelectorAll('.header__link')
 let headerBackBtn = document.querySelector('.header__top-back--btn')
+let headerBackSpan = document.querySelector('.header__top-back--btn span')
 let headerBottomTitleLight = document.querySelector('.header__bottom-title--light')
 let headerBottomTextLight = document.querySelector('.header__bottom-text--light')
 
@@ -45,6 +56,7 @@ swiperV.on('activeIndexChange', function (item) {
     headerBottomTextLight.style.color = 'var(--black)'
     headerLogo.src = 'img/main-logo-dark.svg';
     headerBackBtn.classList.add('header__dark_mode');
+    headerBackSpan.style.color = 'var(--black)'
     headerMenuLinks.forEach(link => link.classList.add('header__dark_mode'));
     // headerMenuLinks.forEach(link => link.addEventListener('mousemove',function() {
     //   link.classList.add('header__link_pink')
@@ -60,6 +72,7 @@ swiperV.on('activeIndexChange', function (item) {
     headerBottomTextLight.style.color = 'var(--white)'
     headerLogo.src = 'img/main-logo.svg';
     headerBackBtn.classList.remove('header__dark_mode');
+    headerBackSpan.style.color = 'var(--white)'
     headerMenuLinks.forEach(link => link.classList.remove('header__dark_mode'));
     headerMenuLinks.forEach(link => link.classList.remove('header__link_pink'))
     SVH.src = 'img/arrow.svg';
@@ -80,20 +93,41 @@ const sliderVertical = document.getElementById('slider-vertical')
 
 // swiperV.on('activeIndexChange', scrollToMaxOrMin(0, 2))
 
-swiperV.on('activeIndexChange', function(item) {
-  // console.log(item);
-  if(item.activeIndex === 2 || item.activeIndex === 0) {
-    // console.log(autoScrollOffset);
-    // scrollY(3500)
-    // directSection.scrollHeight
-    // console.log(directSection.clientHeight);
-    swiperV.mousewheel.disable()
-  }
-})
+let last_scroll = 0;
+// window.onscroll = function(){
+//   if(window.scrollY > last_scroll){
+//     console.log('down');
+//   }else{
+//     console.log('up');
+//   }
+//   last_scroll = window.scrollY;
+// }
 
-sliderVertical.addEventListener('mouseleave', function() {
-  swiperV.mousewheel.enable()
-})
+// swiperV.on('activeIndexChange', function(item) {
+//   // console.log(item);
+//   if (item.activeIndex === 2 && window.scrollY > last_scroll) {
+//     console.log(window.scrollY, last_scroll);
+//     // console.log(autoScrollOffset);
+//     // scrollY(3500)
+//     // directSection.scrollHeight
+//     // console.log(directSection.clientHeight);
+//     window.scrollTo(directSection)
+//     swiperV.mousewheel.disable()
+//     last_scroll = window.scrollY
+//   } else if (item.activeIndex === 0) {
+//     swiperV.mousewheel.enable()
+//   }
+// })
+
+// swiperV.on('activeIndexChange', function(item) {
+//   if (activeIndex >= 2) {
+//     // swiperV.releaseOnEdges = true
+//   }
+// })
+
+// sliderVertical.addEventListener('mouseleave', function() {
+//   swiperV.mousewheel.enable()
+// })
 
 // directSection.addEventListener('mouseenter', function() {
 //   swiperV.mousewheel.enable()
@@ -107,17 +141,18 @@ const animation_3 = document.querySelector('.swiper-slide_amimated_3')
 
 swiperV.on('activeIndexChange', function(anim) {
   console.log(swiperV.activeIndex);
-  if (swiperV.activeIndex === 1) {
+  if (swiperV.activeIndex === 0) {
+    // console.log(sliderVertical);
     animation_1.classList.add('animate__bounceInRight')
   } else {
     animation_1.classList.remove('animate__bounceInRight')
   } 
-  if (swiperV.activeIndex === 2) {
+  if (swiperV.activeIndex === 1) {
     animation_2.classList.add('animate__bounceInRight')
   } else {
     animation_2.classList.remove('animate__bounceInRight')
   }
-  if (swiperV.activeIndex === 3) {
+  if (swiperV.activeIndex === 2) {
     animation_3.classList.add('animate__bounceInRight')
   } else {
     animation_3.classList.remove('animate__bounceInRight')
@@ -148,22 +183,12 @@ let swiperG = new Swiper('.swiper__app_g', {
   },   
 });
 
-// let heading = document.querySelector('.header__bottom-title')
-// let HEADER = document.getElementById('header')
-// let headerLogo = document.querySelector('.header__top-logo--img')
-// let headerMenuLinks = document.querySelectorAll('.header__link')
-// let headerBackBtn = document.querySelector('.header__top-back--btn')
-
-// let burgerBtn = document.querySelector('.burger__btn')
-
-// const SVH = document.querySelector('.header__top-back img')
-
-// let currectSlide = swiperG.activeIndexChange
-
 swiperG.on('activeIndexChange', function (item) {
 
 if(item.activeIndex > 0) {
   HEADER.style.backgroundColor = '#fff';
+  headerBottomTitleLight.style.color = 'var(--black)'
+  headerBottomTextLight.style.color = 'var(--black)'
   headerLogo.src = 'img/main-logo-dark.svg';
   headerBackBtn.classList.add('header__dark_mode');
   headerMenuLinks.forEach(link => link.classList.add('header__dark_mode'));
@@ -172,6 +197,8 @@ if(item.activeIndex > 0) {
 }
 else if (item.activeIndex === 0) {
   HEADER.style.backgroundColor = '#6D5FC8';
+  headerBottomTitleLight.style.color = 'var(--white)'
+  headerBottomTextLight.style.color = 'var(--white)'
   headerLogo.src = 'img/main-logo.svg';
   headerBackBtn.classList.remove('header__dark_mode');
   headerMenuLinks.forEach(link => link.classList.remove('header__dark_mode'));
@@ -181,26 +208,44 @@ else if (item.activeIndex === 0) {
 });
 
 
-// // amimation
+// amimation
 const animation_4 = document.querySelector('.swiper-slide_amimated_4')
 const animation_5 = document.querySelector('.swiper-slide_amimated_5')
 const animation_6 = document.querySelector('.swiper-slide_amimated_6')
 
 swiperG.on('activeIndexChange', function(anim) {
 console.log(swiperG.activeIndex);
-if (swiperG.activeIndex === 1) {
+if (swiperG.activeIndex === 0) {
   animation_4.classList.add('animate__bounceInRight')
 } else {
   animation_4.classList.remove('animate__bounceInRight')
 } 
-if (swiperG.activeIndex === 2) {
+if (swiperG.activeIndex === 1) {
   animation_5.classList.add('animate__bounceInRight')
 } else {
   animation_5.classList.remove('animate__bounceInRight')
 }
-if (swiperG.activeIndex === 3) {
+if (swiperG.activeIndex === 2) {
   animation_6.classList.add('animate__bounceInRight')
 } else {
   animation_6.classList.remove('animate__bounceInRight')
 }
 })
+
+
+window.addEventListener('scroll', event => {
+  const rect = swiperV.el.getBoundingClientRect()
+ 
+  if (
+       rect.bottom < window.innerHeight - 64 &&
+      rect.top > 64
+  ) {
+    if (!document.body.classList.contains('swiper-full-to')) {
+      document.body.classList.add('swiper-full-to')
+    }
+  } else {
+    if (document.body.classList.contains('swiper-full-to')) {
+      document.body.classList.remove('swiper-full-to')
+    }
+  }
+ });
