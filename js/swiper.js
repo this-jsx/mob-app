@@ -249,3 +249,16 @@ window.addEventListener('scroll', event => {
     }
   }
 });
+
+
+// function getCoords(elem) { // кроме IE8-
+//   var box = elem.getBoundingClientRect();
+
+//   return {
+//     top: box.top + window.scrollY,
+//     // left: box.left + pageXOffset
+//   };
+
+// }
+
+// getCoords(directSection)
