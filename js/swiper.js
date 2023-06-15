@@ -27,7 +27,7 @@ let swiperV = new Swiper('.swiper__app_v', {
     // },
     mousewheel: {
       releaseOnEdges: true, // NEW
-      sensitivity: 5
+      sensitivity: 10
     }
 
     // releaseOnEdges: true
@@ -235,9 +235,9 @@ if (swiperG.activeIndex === 2) {
 
 window.addEventListener('scroll', event => {
   const rect = swiperV.el.getBoundingClientRect()
- 
+
   if (
-       rect.bottom < window.innerHeight - 64 &&
+    rect.bottom < window.innerHeight - 64 &&
       rect.top > 64
   ) {
     if (!document.body.classList.contains('swiper-full-to')) {
@@ -248,4 +248,4 @@ window.addEventListener('scroll', event => {
       document.body.classList.remove('swiper-full-to')
     }
   }
- });
+});
