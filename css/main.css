@@ -584,7 +584,7 @@ footer .container {
 /* media */
 
 /* от 1280 */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1281px) {
   .swiper__app_g {
     display: none;
   }
@@ -725,6 +725,86 @@ footer .container {
   }
 }
 
+/* 633 - 670 */
+@media screen and (min-width: 633px) and (max-width: 670px) {
+  .swiper-slide--direction {
+    padding-left: 50px !important;
+  }
+}
+
+/* 633 - 730 */
+@media screen and (min-width: 633px) and (max-width: 730px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -37% !important;
+  }
+}
+
+/* 660 - 700 */
+@media screen and (min-width: 660px) and (max-width: 700px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -37.5% !important;
+  }
+}
+
+/* 730 - 790 */
+@media screen and (min-width: 730px) and (max-width: 790px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -39% !important;
+  }
+}
+
+/* 790 - 840 */
+@media screen and (min-width: 790px) and (max-width: 840px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -37% !important;
+  }
+}
+
+/* 840 - 880 */
+@media screen and (min-width: 840px) and (max-width: 880px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -39.0% !important;
+  }
+}
+
+/* 880 - 950 */
+@media screen and (min-width: 880px) and (max-width: 950px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -40% !important;
+  }
+}
+
+/* 950 - 1023 */
+@media screen and (min-width: 950px) and (max-width: 1023px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: -41% !important;
+  }
+}
+
+@media screen and (min-width: 633px) and (max-width: 650px) {
+  .swiper-slide--centered--margin {
+    margin-right: -5px !important;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 940px) {
+  .swiper-slide--centered--margin {
+    margin-right: 0px !important;
+  }
+}
+
+@media screen and (min-width: 940px) and (max-width: 980px) {
+  .swiper-slide--centered--margin {
+    margin-right: 25px !important;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1023px) {
+  .swiper-slide--centered--margin {
+    margin-right: 48px !important;
+  }
+}
+
 /* 633 - 1024 */
 @media screen and (min-width: 633px) and (max-width: 1024px) {
   .container {
@@ -734,6 +814,16 @@ footer .container {
     width: 75%;
   }
 
+
+  .swiper-slide--wrapper {
+    padding: 40px !important;
+  }
+  .swiper__app_g {
+    height: auto;
+  }
+  #slider-vertical .container {
+    padding: 0 24px;
+  }
   .swiper-slide--direction {
     flex-direction: row-reverse;
     padding: 40px 60px;
@@ -742,8 +832,20 @@ footer .container {
   .header__bottom-info {
     height: auto;
   }
+  .header__bottom-title--small {
+    width: auto;
+  }
   .header__bottom-btn {
     width: 312px
+  }
+  .header__bottom-info--375 {
+    width: 69%;
+    width: 530px;
+    margin-top: -55px;
+  }
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 25%;
+    left: -39.1%;
   }
 
   .direct {
@@ -764,11 +866,17 @@ footer .container {
   .direct__box {
     width: 47%;
   }
+  .direct__box-text {
+    letter-spacing: -0.008em;
+  }
   .direct__box-img img {
     width: 76px;
     height: 76px;
   }
 
+  .sale .container {
+    padding: 80px 16px;
+  }
   .sale__note {
     width: 50%;
     margin: 40px auto 0;
@@ -817,6 +925,7 @@ footer .container {
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
+    letter-spacing: -0.008em;
   }
 
 
@@ -824,7 +933,7 @@ footer .container {
     padding: 80px 160px;
   }
   .sale__top-text {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
     font-size: 24px;
     line-height: 32px;
   }
@@ -838,7 +947,7 @@ footer .container {
     font-weight: 400;
     line-height: 24px;
     width: 55%;
-    margin: 64px auto 0;
+    margin: 80px auto 0;
   }
   
   footer .container {
@@ -847,7 +956,7 @@ footer .container {
   .footer-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .footer__left-title {
     font-size: 40px;
@@ -940,12 +1049,29 @@ footer .container {
     color: var(--white);
   }
   
+  .swiper__app_g {
+    height: auto;
+  }
   .swiper-slide img {
     width: 300px;
     height: 622px;
   }
   .swiper-slide--centered {
     width: auto;
+  }
+  .swiper-slide--centered img {
+    width: 230px;
+    height: 480px;
+  }
+  .swiper-slide--centered--margin img {
+    width: 215px;
+    height: 466px;
+  }
+  #slider-vertical {
+    padding: 45px 0;
+  }
+  #slider-vertical .container {
+    padding: 0 24px;
   }
   .header__bottom-title {
     font-size: 80px;
@@ -959,10 +1085,16 @@ footer .container {
     line-height: 48px;
   }
   .header__bottom-text {
-    margin-top: 24px;
+    margin-top: 32px !important;
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
+  }
+  .header__bottom-text--small {
+    width: 460px !important;
+    margin-top: 24px !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
   }
   .header__bottom-text--dark {
     line-height: 24px;
@@ -976,6 +1108,28 @@ footer .container {
   .swiper-slide--direction {
     flex-direction: row-reverse;
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1280px) {
+  header .swiper-slide--direction.container {
+    padding: 62px 0px !important;
+  }
+  header .swiper-slide--centered {
+    width: auto;
+  }
+  .direct__box {
+    width: 545px !important;
+  }
+
+  .header__bottom .container {
+    padding: 0;
+  }
+  #slider-vertical .swiper-slide--direction {
+    padding: 62px 0px;
+  }
+  #slider-vertical .swiper-slide--centered {
+    width: auto;
   }
 }
 
@@ -1133,7 +1287,7 @@ footer .container {
     display: block;
   }
   .footer__right {
-    margin-bottom: -50px;
+    margin-bottom: -52px;
   }
   .footer__right-img {
     display: block;
@@ -1324,7 +1478,7 @@ footer .container {
     display: block;
   }
   .footer__right {
-    margin-bottom: -50px;
+    margin-bottom: -52px;
   }
   .footer__right-img {
     display: block;
@@ -1366,6 +1520,10 @@ footer .container {
     width: 100px;
     justify-content: flex-start;
   }
+  .swiper-slide--centered img {
+    width: 300px;
+    height: 622px;
+  }
   .header__bottom-btn {
     display: none;
   }
@@ -1391,4 +1549,10 @@ footer .container {
 .animate__animated.animate__bounceInRight {
   animation-duration: 1s;
   animation-delay: .15s;
+}
+
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

@@ -5,6 +5,10 @@ let swiperV = new Swiper('.swiper__app_v', {
       clickable: true
     },
 
+    // slidesPerView: 1,
+
+    // touchReleaseOnEdges: true,
+
     // autoplay: {
     //   delay: 2000
     // },
@@ -82,6 +86,14 @@ swiperV.on('activeIndexChange', function (item) {
 
 const directSection = document.querySelector('.direct')
 const sliderVertical = document.getElementById('slider-vertical')
+console.log(sliderVertical.clientHeight);
+console.log(window.screenY);
+
+// swiperV.on('activeIndexChange', function(item) {
+//   if (item.activeIndex === 0 || item.activeIndex === 1 || item.activeIndex === 2) {
+//     document.querySelector('body').classList.add('stop-scrolling')
+//   }
+// })
 
 // function scrollToMaxOrMin(min, max) {
 //   if(item.activeIndex === min || item.activeIndex === max) {
@@ -93,7 +105,7 @@ const sliderVertical = document.getElementById('slider-vertical')
 
 // swiperV.on('activeIndexChange', scrollToMaxOrMin(0, 2))
 
-let last_scroll = 0;
+// let last_scroll = 0;
 // window.onscroll = function(){
 //   if(window.scrollY > last_scroll){
 //     console.log('down');
@@ -105,17 +117,26 @@ let last_scroll = 0;
 
 // swiperV.on('activeIndexChange', function(item) {
 //   // console.log(item);
-//   if (item.activeIndex === 2 && window.scrollY > last_scroll) {
-//     console.log(window.scrollY, last_scroll);
+//   if (item.activeIndex === 2 && sliderVertical.clientHeight === 846) {
+//     // console.log(window.scrollY, last_scroll);
 //     // console.log(autoScrollOffset);
 //     // scrollY(3500)
 //     // directSection.scrollHeight
 //     // console.log(directSection.clientHeight);
-//     window.scrollTo(directSection)
+//     // window.scrollTo(directSection)
 //     swiperV.mousewheel.disable()
-//     last_scroll = window.scrollY
+//     // last_scroll = window.scrollY
 //   } else if (item.activeIndex === 0) {
 //     swiperV.mousewheel.enable()
+//   }
+// })
+
+// swiperV.on('activeIndexChange', function(item) {
+//   if (item.activeIndex === 0) {
+//     console.log(swiperV.isBeginning)
+//     swiperV.mousewheel.disable()
+//   } else if (item.activeIndex === 2) {
+//     console.log(swiperV.isEnd)
 //   }
 // })
 
@@ -159,6 +180,10 @@ swiperV.on('activeIndexChange', function(anim) {
   }
 })
 
+// swiperV.slideNext(1000, true)
+// swiperV.slides
+console.log(swiperV.height)
+// console.log(swiperV.isBeginning)
 
 
 
