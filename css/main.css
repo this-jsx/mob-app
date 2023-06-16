@@ -140,7 +140,7 @@ a, a:visited {
 /* HEADER BOTTOM */
 
 header {
-  /* height: 100vh; */
+  height: 100vh;
   position: relative;
   overflow: hidden;
   padding-bottom: 16px;
