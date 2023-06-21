@@ -114,15 +114,15 @@ a, a:visited {
 }
 .swiper-slide_amimated_1 {
   top: 17.5%;
-  left: -100%;
+  left: -80%;
 }
 .swiper-slide_amimated_2 {
-  top: 22%;
-  left: 33%;
+  top: 22.5%;
+  left: -82%;
 }
 .swiper-slide_amimated_3 {
-  top: 21.5%;
-  left: -60%;
+  top: 15%;
+  left: -175%;
 }
 .swiper-slide_amimated_4, .swiper-slide_amimated_5, .swiper-slide_amimated_6 {
   top: 25.5%;
@@ -130,7 +130,7 @@ a, a:visited {
   width: 130% !important;
 }
 .slider-vertical {
-  padding: 16px 0;
+  padding: 40px 0;
 }
 .header__bottom-info {
   margin-top: 86px;
@@ -257,7 +257,7 @@ header {
 .header__bottom-text--dark {
   font-size: 16px !important;
   font-weight: 500 !important;
-  margin-top: 16px !important;
+  margin-top: 24px !important;
   line-height: 24px !important;
 }
 
@@ -513,9 +513,9 @@ header {
   padding-top: 7.5%;
   padding: 4px 12px;
   background: #fff;
-  left: 54%;
+  left: 55%;
   border-radius: 4px;
-  top: 50%;
+  top: 31%;
   opacity: 0;
 }
 
@@ -1155,6 +1155,7 @@ footer .container {
   .header__bottom-title {
     font-size: 80px;
     line-height: 88px;
+    letter-spacing: -0.04em;
   }
   .header__bottom-text--16 {
     line-height: 32px;
@@ -1253,6 +1254,8 @@ footer .container {
     width: 346px;
   }
   .sale__note {
+    width: 42%;
+    margin: 0 auto;
     margin-top: 64px;
     font-size: 16px;
     font-weight: 400;
@@ -1323,13 +1326,15 @@ footer .container {
   .header__bottom-title--small {
     width: auto;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.04em;
   }
   .header__bottom-text--small {
     font-weight: 400 !important;
-    font-size: 18px !important;
-    line-height: 24px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    letter-spacing: -0.008em;
   }
   .swiper-slide--centered {
     width: 100px;
@@ -1454,6 +1459,8 @@ footer .container {
     width: 346px;
   }
   .sale__note {
+    width: 42%;
+    margin: 0 auto;
     margin-top: 64px;
     font-size: 16px;
     font-weight: 400;
@@ -1520,17 +1527,20 @@ footer .container {
   .header__bottom-title {
     font-size: 80px;
     line-height: 88px;
+    letter-spacing: -0.04em;
   }
   .header__bottom-title--small {
     width: auto;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.04em;
   }
   .header__bottom-text--small {
     font-weight: 400 !important;
-    font-size: 20px !important;
-    line-height: 28px !important;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    letter-spacing: -0.008em;
   }
   .swiper-slide--centered {
     width: 100px;

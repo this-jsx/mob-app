@@ -65,13 +65,13 @@ console.log(footerAppstore, footerPlaymarket, footerRustore);
 //   // visibleShopAndroid.src
 // }
 
-if (/iPhone/i.test(navigator.userAgent)) {
-  visibleShopLink.src = 'img/download_appstore.png'
-} else if (/Android/i.test(navigator.userAgent)) {
-  visibleShopLink.src = 'img/download_playmarket.png'
-} else {
-  visibleShopLink.src = 'img/download_rustore.png'
-}
+// if (/iPhone/i.test(navigator.userAgent)) {
+//   visibleShopLink.src = 'img/download_appstore.png'
+// } else if (/Android/i.test(navigator.userAgent)) {
+//   visibleShopLink.src = 'img/download_playmarket.png'
+// } else {
+//   visibleShopLink.src = 'img/download_rustore.png'
+// }
 // console.log(window.screen.width);
 if (window.screen.width <= 430 || /Android/i.test(navigator.userAgent)) {
   visibleShopAndroid.classList.remove('footer__left-link--hidden')
