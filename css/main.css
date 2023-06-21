@@ -1542,6 +1542,9 @@ footer .container {
     line-height: 32px !important;
     letter-spacing: -0.008em;
   }
+  .header__bottom-text--16 {
+    line-height: 32px;
+  }
   .swiper-slide--centered {
     width: 100px;
     justify-content: flex-start;
