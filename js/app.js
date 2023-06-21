@@ -32,13 +32,38 @@ document.addEventListener('click', function(e) {
   }
 })
 
-const headerItem1 = document.querySelector('.header__link--1')
 
 // const navigatorUserAgent = navigator.userAgent
 const visibleShopLink = document.querySelector('.footer__left-link_showed img')
 const visibleShopAndroid = document.querySelector('.footer__left-link--android img')
+
+// footer id's
+const footerAppstore = document.getElementById('footer__appstore')
+const footerPlaymarket = document.getElementById('footer__playmarket')
+const footerRustore = document.getElementById('footer__rustore')
+console.log(footerAppstore, footerPlaymarket, footerRustore);
+
 // console.log(navigatorUserAgent);
 // console.log(visibleShopLink);
+
+// if (/iPhone/i.test(navigator.userAgent)) {
+//   footerAppstore.src = 'img/download_appstore.png';
+//   footerPlaymarket.style.display = 'none'
+//   footerRustore.style.display = 'none'
+// } else if (/Android/i.test(navigator.userAgent)) {
+//   footerPlaymarket.src = 'img/download_playmarket.png';
+//   footerAppstore.style.display = 'none'
+//   footerRustore.style.display = 'none'
+// } else {
+//   footerRustore.src = 'img/download_rustore.png';
+//   footerPlaymarket.style.display = 'none'
+//   footerAppstore.style.display = 'none'
+// }
+// // console.log(window.screen.width);
+// if (window.screen.width <= 430 || /Android/i.test(navigator.userAgent)) {
+//   visibleShopAndroid.classList.remove('footer__left-link--hidden')
+//   // visibleShopAndroid.src
+// }
 
 if (/iPhone/i.test(navigator.userAgent)) {
   visibleShopLink.src = 'img/download_appstore.png'
@@ -53,19 +78,10 @@ if (window.screen.width <= 430 || /Android/i.test(navigator.userAgent)) {
   // visibleShopAndroid.src
 }
 
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//   // код для мобильных устройств
-//   console.log('вход с Айфон / андроид');
 
-//   headerItem1.style.color = 'green'
-// } else {
-//   // код для обычных устройств
-//   console.log('вход с компа');
-//   headerItem1.style.color = 'blue'
-// }
 
 function copyClipboard(text) {
-  return navigator.clipboard.writeText(text)
+  return navigator.clipboard.writeText(text.toUpperCase())
 }
 
 const saleTooltip = document.querySelector('.sale__tooltip')
@@ -74,13 +90,13 @@ const saleImg = document.querySelector('.sale__top-link img')
 // console.log(saleTooltip);
 saleLink.addEventListener('click', function() {
   // saleTooltip.clipboard.writeText('Скопировано')
-  copyClipboard('ссылка копи')
+  copyClipboard('coralapp')
   saleTooltip.textContent = 'Скопировано'
 })
 
 saleTooltip.addEventListener('click', function() {
   // saleTooltip.clipboard.writeText('Скопировано')
-  copyClipboard('тултип копи')
+  copyClipboard('coralapp')
   saleTooltip.textContent = 'Скопировано'
 })
 
