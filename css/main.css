@@ -761,7 +761,7 @@ footer .container {
     margin-top: 50px;
     width: 238px;
     height: 236px;
-    background-image: url('/img/qr_code.png');
+    background-image: url("/img/qr_code.png");
     background-size: contain;
   }
   .footer__right_hover {
@@ -950,7 +950,7 @@ footer .container {
     .footer__right {
       width: 303px;
       height: 377px;
-      background-image: url('/img/phone-footer.png');
+      background-image: url("/img/phone-footer.png");
       background-position: center;
     }
 }
