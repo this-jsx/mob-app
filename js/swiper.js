@@ -188,11 +188,6 @@ const animation_3 = document.querySelector('.swiper-slide_amimated_3')
 //   }
 // })
 
-// swiperV.slideNext(1000, true)
-// swiperV.slides
-// console.log(swiperV.height)
-// console.log(swiperV.isBeginning)
-
 
 
 let swiperG = new Swiper('.swiper__app_g', {
@@ -219,24 +214,24 @@ let swiperG = new Swiper('.swiper__app_g', {
 swiperG.on('activeIndexChange', function (item) {
 
 if(item.activeIndex > 0) {
-  HEADER.style.backgroundColor = '#fff';
-  headerBottomTitleLight.style.color = 'var(--black)'
-  headerBottomTextLight.style.color = 'var(--black)'
-  headerLogo.src = 'img/main-logo-dark.svg';
-  headerBackBtn.classList.add('header__dark_mode');
-  headerMenuLinks.forEach(link => link.classList.add('header__dark_mode'));
-  SVH.src = 'img/arrow-black.svg';
-  burgerBtn.src = 'img/burger-btn-black.svg'
+  // HEADER.style.backgroundColor = '#fff';
+  // headerBottomTitleLight.style.color = 'var(--black)'
+  // headerBottomTextLight.style.color = 'var(--black)'
+  // headerLogo.src = 'img/main-logo-dark.svg';
+  // headerBackBtn.classList.add('header__dark_mode');
+  // headerMenuLinks.forEach(link => link.classList.add('header__dark_mode'));
+  // SVH.src = 'img/arrow-black.svg';
+  // burgerBtn.src = 'img/burger-btn-black.svg'
 }
 else if (item.activeIndex === 0) {
-  HEADER.style.backgroundColor = '#6D5FC8';
-  headerBottomTitleLight.style.color = 'var(--white)'
-  headerBottomTextLight.style.color = 'var(--white)'
-  headerLogo.src = 'img/main-logo.svg';
-  headerBackBtn.classList.remove('header__dark_mode');
-  headerMenuLinks.forEach(link => link.classList.remove('header__dark_mode'));
-  SVH.src = 'img/arrow.svg';
-  burgerBtn.src = 'img/burger-btn-white.svg'
+  // HEADER.style.backgroundColor = '#6D5FC8';
+  // headerBottomTitleLight.style.color = 'var(--white)'
+  // headerBottomTextLight.style.color = 'var(--white)'
+  // headerLogo.src = 'img/main-logo.svg';
+  // headerBackBtn.classList.remove('header__dark_mode');
+  // headerMenuLinks.forEach(link => link.classList.remove('header__dark_mode'));
+  // SVH.src = 'img/arrow.svg';
+  // burgerBtn.src = 'img/burger-btn-white.svg'
 }
 });
 
@@ -247,7 +242,7 @@ const animation_5 = document.querySelector('.swiper-slide_amimated_5')
 const animation_6 = document.querySelector('.swiper-slide_amimated_6')
 
 swiperG.on('activeIndexChange', function(anim) {
-  console.log(swiperG.activeIndex);
+  // console.log(swiperG.activeIndex);
   if (swiperG.activeIndex === 0) {
     animation_4.classList.add('animate__bounceInRight')
   } else {
