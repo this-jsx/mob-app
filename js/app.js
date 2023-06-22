@@ -67,16 +67,30 @@ const visibleShopAndroid = document.querySelector('.footer__left-link--android i
 //   // visibleShopAndroid.src
 // }
 
-if (/iPhone/i.test(navigator.userAgent)) {
-  visibleShopImg.src = 'img/download_appstore.svg';
-  visibleShopLink.href = 'https://apps.apple.com/ru/app/coral-club/id1437262333'
-} else if (/Android/i.test(navigator.userAgent)) {
-  visibleShopImg.src = 'img/download_playmarket.svg';
-  visibleShopLink.href = 'https://play.google.com/store/apps/details?id=com.coralclub.distribution.app&hl=ru'
-} else {
-  visibleShopImg.src = 'img/download_rustore.svg';
-  visibleShopLink.href = 'https://apps.rustore.ru/app/com.coralclub.distribution.app'
+console.log(window.screen.width);
+
+if (window.screen.width < 1024) {
+  if (/iPhone/i.test(navigator.userAgent)) {
+    visibleShopImg.src = 'img/download_appstore.svg';
+    visibleShopLink.href = 'https://apps.apple.com/ru/app/coral-club/id1437262333'
+  } else if (/Android/i.test(navigator.userAgent)) {
+    visibleShopImg.src = 'img/download_playmarket.svg';
+    visibleShopLink.href = 'https://play.google.com/store/apps/details?id=com.coralclub.distribution.app&hl=ru'
+  } else {
+    visibleShopImg.src = 'img/download_rustore.svg';
+    visibleShopLink.href = 'https://apps.rustore.ru/app/com.coralclub.distribution.app'
+  }
 }
+// if (/iPhone/i.test(navigator.userAgent)) {
+//   visibleShopImg.src = 'img/download_appstore.svg';
+//   visibleShopLink.href = 'https://apps.apple.com/ru/app/coral-club/id1437262333'
+// } else if (/Android/i.test(navigator.userAgent)) {
+//   visibleShopImg.src = 'img/download_playmarket.svg';
+//   visibleShopLink.href = 'https://play.google.com/store/apps/details?id=com.coralclub.distribution.app&hl=ru'
+// } else {
+//   visibleShopImg.src = 'img/download_rustore.svg';
+//   visibleShopLink.href = 'https://apps.rustore.ru/app/com.coralclub.distribution.app'
+// }
 // console.log(window.screen.width);
 // if (window.screen.width <= 430 || /Android/i.test(navigator.userAgent)) {
 //   visibleShopAndroid.classList.remove('footer__left-link--hidden')
@@ -111,7 +125,7 @@ saleTooltip.addEventListener('click', function() {
 
 const toolTipInitText = [saleLink, saleImg, saleTooltip]
 toolTipInitText.forEach(item => item.addEventListener('mouseenter', function() {
-  saleLink.style.background = '#877CCF'
+  // saleLink.style.background = '#877CCF'
 }))
 
 toolTipInitText.forEach(item => item.addEventListener('mouseleave', function() {

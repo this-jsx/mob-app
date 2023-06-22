@@ -540,7 +540,7 @@ header {
 
 .sale__tooltip:hover {
   opacity: 1;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .sale__note {
@@ -1437,6 +1437,10 @@ footer .container {
   }
   #slider__vertical_1 .swiper-slide--centered, #slider__vertical_3 .swiper-slide--centered {
     margin-left: 0;
+  }
+
+  .swiper-slide--direction-px-120 {
+    padding: 62px 120px !important;
   }
 }
 
