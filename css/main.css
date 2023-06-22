@@ -115,16 +115,19 @@ a, a:visited {
   height: auto !important;
 }
 .swiper-slide_amimated_1 {
-  top: 17.5%;
-  left: -80%;
+  width: 420% !important;
+  top: 15.5%;
+  left: 28%;
 }
 .swiper-slide_amimated_2 {
-  top: 22.5%;
-  left: 40%;
+  width: 400% !important;
+  top: 17.5%;
+  left: -112%;
 }
 .swiper-slide_amimated_3 {
-  top: 15%;
-  left: -152%;
+  width: 320% !important;
+  top: 20%;
+  left: 116%;
 }
 .swiper-slide_amimated_4, .swiper-slide_amimated_5, .swiper-slide_amimated_6 {
   top: 25.5%;
