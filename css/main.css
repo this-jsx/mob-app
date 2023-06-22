@@ -610,9 +610,6 @@ footer .container {
   #slider__vertical_2, #slider__vertical_3 {
     display: none;
   }
-  .footer__right {
-    display: none;
-  }
 }
 
 /* до 375 */
@@ -761,10 +758,10 @@ footer .container {
 @media screen and (min-width: 375px) and (max-width: 632px) {
   .footer__right {
     display: block;
-    background-image: url('img/qr_code.png') !important;
-    width: 238px !important;
-    height: 236px !important;
     margin-top: 50px;
+    width: 238px;
+    height: 236px;
+    background-image: url('/img/qr_code.png');
     background-size: contain;
   }
   .footer__right_hover {
@@ -948,6 +945,17 @@ footer .container {
   }
 }
 
+
+@media screen and (min-width: 1024px) {
+    .footer__right {
+      width: 303px;
+      height: 377px;
+      background-image: url('/img/phone-footer.png');
+      background-position: center;
+    }
+}
+
+
 /* 1024 - 1280 */
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
   .container {
@@ -1045,6 +1053,9 @@ footer .container {
   }
   .footer__right {
     display: block;
+  }
+  .footer__right {
+    /* display: none; */
   }
   /* .footer__left-link {
     width: 168px;
