@@ -95,7 +95,7 @@ const SVH = document.querySelector('.header__top-back img')
 const directSection = document.querySelector('.direct')
 const sliderVertical = document.getElementById('slider-vertical')
 // console.log(sliderVertical.clientHeight);
-console.log(window.screenY);
+// console.log(window.screenY);
 
 // swiperV.on('activeIndexChange', function(item) {
 //   if (item.activeIndex === 0 || item.activeIndex === 1 || item.activeIndex === 2) {

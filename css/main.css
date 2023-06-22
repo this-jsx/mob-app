@@ -597,9 +597,9 @@ footer .container {
     display: none;
   }
 
-  .footer__left-store {
+  /* .footer__left-store {
     width: 68%;
-  }
+  } */
 }
 
 /* до 1280 */
@@ -1043,7 +1043,7 @@ footer .container {
   .footer__left-store {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 68%;
     margin-top: 40px;
     justify-content: space-between;
     height: 114px;
@@ -1167,7 +1167,7 @@ footer .container {
   .header__bottom-text {
     margin-top: 32px !important;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 32px;
   }
   .header__bottom-text--small {
@@ -1618,6 +1618,7 @@ footer .container {
     letter-spacing: -0.008em;
   }
   .header__bottom-text--16 {
+    font-weight: 400;
     line-height: 32px;
   }
   .swiper-slide--centered {

@@ -34,14 +34,16 @@ document.addEventListener('click', function(e) {
 
 
 // const navigatorUserAgent = navigator.userAgent
-const visibleShopLink = document.querySelector('.footer__left-link_showed img')
+const visibleShopImg = document.querySelector('.footer__left-link_showed img')
+const visibleShopLink = document.querySelector('.footer__left-link_showed')
+
 const visibleShopAndroid = document.querySelector('.footer__left-link--android img')
 
 // footer id's
-const footerAppstore = document.getElementById('footer__appstore')
-const footerPlaymarket = document.getElementById('footer__playmarket')
-const footerRustore = document.getElementById('footer__rustore')
-console.log(footerAppstore, footerPlaymarket, footerRustore);
+// const footerAppstore = document.getElementById('footer__appstore')
+// const footerPlaymarket = document.getElementById('footer__playmarket')
+// const footerRustore = document.getElementById('footer__rustore')
+// console.log(footerAppstore, footerPlaymarket, footerRustore);
 
 // console.log(navigatorUserAgent);
 // console.log(visibleShopLink);
@@ -65,18 +67,21 @@ console.log(footerAppstore, footerPlaymarket, footerRustore);
 //   // visibleShopAndroid.src
 // }
 
-// if (/iPhone/i.test(navigator.userAgent)) {
-//   visibleShopLink.src = 'img/download_appstore.png'
-// } else if (/Android/i.test(navigator.userAgent)) {
-//   visibleShopLink.src = 'img/download_playmarket.png'
-// } else {
-//   visibleShopLink.src = 'img/download_rustore.png'
-// }
-// console.log(window.screen.width);
-if (window.screen.width <= 430 || /Android/i.test(navigator.userAgent)) {
-  visibleShopAndroid.classList.remove('footer__left-link--hidden')
-  // visibleShopAndroid.src
+if (/iPhone/i.test(navigator.userAgent)) {
+  visibleShopImg.src = 'img/download_appstore.svg';
+  visibleShopLink.href = 'https://apps.apple.com/ru/app/coral-club/id1437262333'
+} else if (/Android/i.test(navigator.userAgent)) {
+  visibleShopImg.src = 'img/download_playmarket.svg';
+  visibleShopLink.href = 'https://play.google.com/store/apps/details?id=com.coralclub.distribution.app&hl=ru'
+} else {
+  visibleShopImg.src = 'img/download_rustore.svg';
+  visibleShopLink.href = 'https://apps.rustore.ru/app/com.coralclub.distribution.app'
 }
+// console.log(window.screen.width);
+// if (window.screen.width <= 430 || /Android/i.test(navigator.userAgent)) {
+//   visibleShopAndroid.classList.remove('footer__left-link--hidden')
+//   // visibleShopAndroid.src
+// }
 
 
 
