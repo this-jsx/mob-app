@@ -260,7 +260,7 @@ header {
   font-size: 16px !important;
   font-weight: 500 !important;
   margin-top: 24px !important;
-  line-height: 24px !important;
+  line-height: 22px !important;
 }
 
 .header__bottom-title {
@@ -761,7 +761,7 @@ footer .container {
 @media screen and (min-width: 375px) and (max-width: 632px) {
   .footer__right {
     display: block;
-    background-image: url('img/qr_code.svg') !important;
+    background-image: url('img/qr_code.png') !important;
     width: 238px !important;
     height: 236px !important;
     margin-top: 50px;
