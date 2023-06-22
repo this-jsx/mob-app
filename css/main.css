@@ -596,6 +596,10 @@ footer .container {
   .swiper__app_g {
     display: none;
   }
+
+  .footer__left-store {
+    width: 68%;
+  }
 }
 
 /* до 1280 */
@@ -757,7 +761,7 @@ footer .container {
 @media screen and (min-width: 375px) and (max-width: 632px) {
   .footer__right {
     display: block;
-    background-image: url('/img/qr_code.png') !important;
+    background-image: url('img/qr_code.svg') !important;
     width: 238px !important;
     height: 236px !important;
     margin-top: 50px;
@@ -769,6 +773,12 @@ footer .container {
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 633px) {
+  .footer__right_hover {
+    display: none !important;
   }
 }
 
@@ -1025,7 +1035,7 @@ footer .container {
   .footer__left-store {
     display: flex;
     flex-wrap: wrap;
-    width: 68%;
+    width: 70%;
     margin-top: 40px;
     justify-content: space-between;
     height: 114px;
